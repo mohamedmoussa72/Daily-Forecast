@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Daily Forecast</string>
+    <string name="weather">Weather</string>
+    <string name="search">Search</string>
+    <string name="city">City</string>
+    <string name="message_approximate_results">These are approximate results</string>
+    <string name="select_country">Select Country</string>
+    <string name="min_temperature">Min Temperature:</string>
+    <string name="max_temperature">Max Temperature:</string>
+    <string name="wind_speed">Wind Speed:</string>
+    <string name="try_again">Try Again</string>
+</resources>
