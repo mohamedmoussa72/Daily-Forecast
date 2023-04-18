@@ -87,7 +87,6 @@ private class NetworkBoundResource<ResultType, RequestType>
                     loadFromDb().collect {
 
                         collector.send(DataResult.success(it))
-                        Log.e("TagDataNetwork",it.toString())
                         if (it.toString() == "null") {
                             loadFromDb().collect {
                                 collector.send(DataResult.error(context.getString(R.string.message_no_network_connected_str), it))

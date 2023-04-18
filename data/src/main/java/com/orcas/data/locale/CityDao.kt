@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface CityDao {
     @Query("SELECT * FROM ${ConstantData.CITY_TABLE}")
-    fun getAllData(): Flow<List<City>>
+    fun getAllData(): List<City>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(movies: List<City>)

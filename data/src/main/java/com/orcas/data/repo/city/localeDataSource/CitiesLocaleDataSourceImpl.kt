@@ -16,7 +16,8 @@ class CitiesLocaleDataSourceImpl @Inject constructor(
         cityDao.insert(cityList)
     }
 
-    override suspend fun getSavedCitiesData(): Flow<List<City>> {
-       return cityDao.getAllData()
+    override suspend fun getSavedCitiesData(): Flow<List<City>>  {
+        return flow {
+            emit(cityDao.getAllData()) }
     }
 }

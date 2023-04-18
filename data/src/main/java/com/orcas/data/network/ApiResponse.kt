@@ -18,7 +18,7 @@ sealed class ApiResponse<T> {
         fun <T> create(response: Response<T>): ApiResponse<T> {
             return if (response.isSuccessful) {
                 val body = response.body()
-                Log.e("TagDatannn",body.toString()+" bbb"+response.code())
+//                Log.e("TagDatannn",body.toString()+" bbb"+response.code())
 
 //                if (  response.body().toString().split("(")[0] == "ApiErrorResponse"
 //                            || response.body().toString().split("(")[0] == "CitiesResponse"

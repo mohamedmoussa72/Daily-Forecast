@@ -1,0 +1,74 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "cityNameAr": "Ø§Ù„Ù‚Ø§Ù‡Ø±Ø©",
+      "cityNameEn": "Cairo",
+      "lat": 30.0444,
+      "lon": 31.2357
+    },
+    {
+      "id": 2,
+      "cityNameAr": "Ø¯Ø¨ÙŠ",
+      "cityNameEn": "Dubai",
+      "lat": 25.2048,
+      "lon": 55.2708
+    },
+    {
+      "id": 3,
+      "cityNameAr": "Ø¨Ø§Ø±ÙŠØ³",
+      "cityNameEn": "Paris",
+      "lat": 48.8566,
+      "lon": 2.3522
+    },
+    {
+      "id": 4,
+      "cityNameAr": "Ù„Ù†Ø¯Ù†",
+      "cityNameEn": "London",
+      "lat": 51.5074,
+      "lon": -0.1278
+    },
+    {
+      "id": 5,
+      "cityNameAr": "Ù†ÙŠÙˆÙŠÙˆØ±Ùƒ",
+      "cityNameEn": "New York",
+      "lat": 40.7128,
+      "lon": -74.0060
+    },
+    {
+      "id": 6,
+      "cityNameAr": "Ø·ÙˆÙƒÙŠÙˆ",
+      "cityNameEn": "Tokyo",
+      "lat": 35.6762,
+      "lon": 139.6503
+    },
+    {
+      "id": 7,
+      "cityNameAr": "Ø³Ù†ØºØ§ÙÙˆØ±Ø©",
+      "cityNameEn": "Singapore",
+      "lat": 1.3521,
+      "lon": 103.8198
+    },
+    {
+      "id": 8,
+      "cityNameAr": "Ø±ÙŠÙˆ Ø¯ÙŠ Ø¬Ø§Ù†ÙŠØ±Ùˆ",
+      "cityNameEn": "Rio de Janeiro",
+      "lat": -22.9068,
+      "lon": -43.1729
+    },
+    {
+      "id": 9,
+      "cityNameAr": "Ø³ÙŠØ¯Ù†ÙŠ",
+      "cityNameEn": "Sydney",
+      "lat": -33.8688,
+      "lon": 151.2093
+    },
+    {
+      "id": 10,
+      "cityNameAr": "Ù…ÙˆØ³ÙƒÙˆ",
+      "cityNameEn": "Moscow",
+      "lat": 55.7558,
+      "lon": 37.6173
+    }
+  ]
+}
