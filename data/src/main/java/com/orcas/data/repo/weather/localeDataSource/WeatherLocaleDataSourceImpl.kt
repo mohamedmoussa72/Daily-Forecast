@@ -1,6 +1,5 @@
 package com.orcas.data.repo.weather.localeDataSource
 
-import android.util.Log
 import com.orcas.data.locale.WeatherDao
 import com.orcas.data.model.WeatherDataDB
 import kotlinx.coroutines.flow.Flow

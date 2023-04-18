@@ -1,6 +1,5 @@
 package com.orcas.data.network
 
-import android.util.Log
 import retrofit2.Response
 import timber.log.Timber
 
@@ -18,13 +17,6 @@ sealed class ApiResponse<T> {
         fun <T> create(response: Response<T>): ApiResponse<T> {
             return if (response.isSuccessful) {
                 val body = response.body()
-//                Log.e("TagDatannn",body.toString()+" bbb"+response.code())
-
-//                if (  response.body().toString().split("(")[0] == "ApiErrorResponse"
-//                            || response.body().toString().split("(")[0] == "CitiesResponse"
-//                            ||  response.body().toString().split("(")[0] == "WeatherDataResponse"){
-//                }
-
                 if (body == null || response.code() == 204) {
                     ApiEmptyResponse("empty")
                 } else {

@@ -1,7 +1,6 @@
 package com.orcas.dailyforecast.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
@@ -81,18 +80,18 @@ class MainActivity : BaseActivity(), RecyclerItemListener {
                 if (data.data!!.isNotEmpty())
                     bindListData(cities = it)
                 else
-                    showNoData(data)
+                    showNoData()
             }
             Status.ERROR -> {
                 if (data.data!!.isEmpty())
-                    showNoData(data)
+                    showNoData()
             }
             Status.No_NETWORK -> {
             }
         }
     }
 
-    private fun showNoData(data: DataResult<List<City>>) {
+    private fun showNoData() {
         binding.tvActivityMainTryAgain.toVisible()
         cityViewModel.showToastMessage(getString(com.orcas.data.R.string.message_no_network_connected_str))
     }
@@ -119,11 +118,6 @@ class MainActivity : BaseActivity(), RecyclerItemListener {
         binding.tvActivityMainToolbarSearch.text = city.cityNameEn
         weatherViewModel.getWeather(this,city.id, city.lat, city.lon)
         showListLoadingView(false)
-
-        Log.e(
-            "TagDataGone",
-            city.id.toString() + " " + city.cityNameEn + " " + city.lat + " " + city.lon
-        )
     }
 
     private fun handleWeatherData(data: DataResult<WeatherDataDB>) {
@@ -134,16 +128,11 @@ class MainActivity : BaseActivity(), RecyclerItemListener {
                 bindWeatherData(data = it)
             }
             Status.ERROR -> {
-//              if (data.data.toString()== "null")
                 showNoDataWeather(data)
-//                else
-//                  cityViewModel.showToastMessage("near data")
-                Log.e("TagDataError", data.message.toString() + " " + data.data)
             }
             Status.No_NETWORK -> {
                 if (data.data.toString() != "null")
                     cityViewModel.showToastMessage( getString(R.string.message_approximate_results))
-                Log.e("TagDataNoooooooo", data.message.toString() + " " + data.data + " " + data)
 
             }
         }
@@ -181,7 +170,6 @@ class MainActivity : BaseActivity(), RecyclerItemListener {
             tvActivityMainMaxDegree.text = data.weatherData.main.temp_max.toString()
             binding.clActivityMainWeatherContainer.toVisible()
             binding.pbDataLoading.toGone()
-            Log.e("TagDataGone", data.citName + " " + data.id)
 
         }
     }

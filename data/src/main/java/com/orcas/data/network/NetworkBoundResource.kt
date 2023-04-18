@@ -1,7 +1,6 @@
 package com.orcas.data.network
 
 import android.content.Context
-import android.util.Log
 import androidx.annotation.MainThread
 import com.orcas.data.R
 import com.orcas.data.utile.CoroutineAppExecutors

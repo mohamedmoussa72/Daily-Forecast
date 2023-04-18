@@ -1,10 +1,7 @@
 package com.orcas.data.repo.city
 
 import android.content.Context
-import android.util.Log
-import com.orcas.data.model.city.CitiesResponse
 import com.orcas.data.model.city.City
-import com.orcas.data.network.ApiResponse
 import com.orcas.data.network.networkBoundResource
 import com.orcas.data.repo.city.localeDataSource.CitiesLocaleDataSource
 import com.orcas.data.repo.city.remoteDataSource.CitiesRemoteDataSource
@@ -22,15 +19,11 @@ class CityRepositoryImpl @Inject constructor(
         context,
         coroutineAppExecutors = coroutineAppExecutors,
         saveCallResult = { response ->
-            Log.e("TagCityRe",response.cities.toString()+" bbb")
             response.cities?.let { citiesLocaleDataSource.saveCityToDB(cityList = it) }
         },
         loadFromDb = {
-            Log.e("TagCityRe","load")
             citiesLocaleDataSource.getSavedCitiesData() },
         fetch = {
-            Log.e("TagCityRe","fetch")
-
             citiesRemoteDataSource.getCities()
         }
     )

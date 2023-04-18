@@ -6,7 +6,6 @@ import com.orcas.data.network.networkBoundResource
 import com.orcas.data.utile.ApiUtil
 import com.orcas.data.utile.CoroutineAppExecutors
 import com.orcas.data.utile.Status
-import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.take
@@ -15,7 +14,6 @@ import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.runTest
 import org.hamcrest.CoreMatchers
 import org.hamcrest.MatcherAssert
-import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -36,12 +34,6 @@ class NetworkBoundResourceTest {
     @Rule
     @JvmField
     val instantExecutorRule = InstantTaskExecutorRule()
-
-    @OptIn(ExperimentalCoroutinesApi::class)
-    @Before
-    fun init() {
-        //Mockito.`when`(appCoroutineExecutors.diskIODispatcher()).thenReturn(testDispatcher)
-    }
 
     @OptIn(ExperimentalCoroutinesApi::class)
     @Test
