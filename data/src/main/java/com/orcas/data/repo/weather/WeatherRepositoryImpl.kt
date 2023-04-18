@@ -7,10 +7,7 @@ import com.orcas.data.repo.weather.localeDataSource.WeatherLocaleDataSource
 import com.orcas.data.repo.weather.remoteDataSource.WeatherRemoteDataSource
 import com.orcas.data.utile.CoroutineAppExecutors
 import com.orcas.data.utile.DataResult
-import com.orcas.data.utile.StringUtil
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
-import java.io.IOException
 import javax.inject.Inject
 
 class WeatherRepositoryImpl @Inject constructor(

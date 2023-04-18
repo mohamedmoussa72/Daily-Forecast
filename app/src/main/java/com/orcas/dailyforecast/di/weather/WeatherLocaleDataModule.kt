@@ -3,7 +3,6 @@ package com.orcas.dailyforecast.di.weather
 import com.orcas.data.locale.WeatherDao
 import com.orcas.data.repo.weather.localeDataSource.WeatherLocaleDataSource
 import com.orcas.data.repo.weather.localeDataSource.WeatherLocaleDataSourceImpl
-import com.orcas.data.utile.StringUtil
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -4,7 +4,6 @@ package com.orcas.dailyforecast.di.city
 import com.orcas.data.locale.CityDao
 import com.orcas.data.repo.city.localeDataSource.CitiesLocaleDataSource
 import com.orcas.data.repo.city.localeDataSource.CitiesLocaleDataSourceImpl
-import com.orcas.data.utile.StringUtil
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -24,13 +24,5 @@ data class DataResult<out T>(val status: Status, val data: T?, val message: Stri
 
     }
 
-    fun isFinalStatus(): Boolean {
-        return status == Status.SUCCESS || status == Status.ERROR
-    }
-
-   public fun isLoading(): Boolean {
-        return status == Status.LOADING
-    }
-
 
 }

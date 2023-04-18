@@ -4,7 +4,6 @@ package com.orcas.dailyforecast.di.city
 import com.orcas.data.network.api.CitiesApiService
 import com.orcas.data.repo.city.remoteDataSource.CitiesRemoteDataSource
 import com.orcas.data.repo.city.remoteDataSource.CitiesRemoteDataSourceImpl
-import com.orcas.data.utile.StringUtil
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

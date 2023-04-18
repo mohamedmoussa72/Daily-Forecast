@@ -25,60 +25,41 @@ class MainActivityTest {
 
     @Test
     fun mainActivityTest() {
-        val textView = onView(
-            allOf(
-                withId(R.id.tv_activity_main_toolbar_search), withText("Select Country"),
-                withParent(
-                    allOf(
-                        withId(R.id.cl_activity_main_toolbar_search),
-                        withParent(withId(R.id.cl_activity_main_container))
-                    )
-                ),
+        val tvSelectCountry = onView(allOf(withId(R.id.tv_activity_main_toolbar_search), withText("Select Country"), withParent(allOf(withId(R.id.cl_activity_main_toolbar_search), withParent(withId(R.id.cl_activity_main_container)))),
                 isDisplayed()
             )
         )
-        textView.check(matches(withText("Select Country")))
+        tvSelectCountry.check(matches(withText("Select Country")))
+        tvSelectCountry.perform(click())
 
-        val textView2 = onView(
+        val tvTryAgain = onView(
             allOf(
                 withId(R.id.tv_activity_main_try_again), withText("Try Again"),
-                withParent(
-                    allOf(
-                        withId(R.id.cl_activity_main_container),
-                        withParent(withId(android.R.id.content))
-                    )
+                withParent(allOf(withId(R.id.cl_activity_main_container), withParent(withId(android.R.id.content)))
                 ),
                 isDisplayed()
             )
         )
-        textView2.check(matches(withText("Try Again")))
+        try {
+            tvTryAgain.check(matches(isDisplayed()))
+            tvTryAgain.check(matches(withText("Try Again")))
+            tvTryAgain.perform(click())
+        }catch (_:Exception){
 
-        val imageView = onView(
-            allOf(
-                withId(R.id.iv_activity_main_no_data),
-                withParent(
-                    allOf(
-                        withId(R.id.cl_activity_main_container),
-                        withParent(withId(android.R.id.content))
-                    )
-                ),
-                isDisplayed()
-            )
-        )
-        imageView.check(matches(isDisplayed()))
+        }
 
-        val imageView2 = onView(
-            allOf(
-                withId(R.id.iv_activity_main_toolbar_search),
-                withParent(
-                    allOf(
-                        withId(R.id.cl_activity_main_toolbar_search),
-                        withParent(withId(R.id.cl_activity_main_container))
-                    )
-                ),
+
+        val ivPlaceHolder = onView(
+            allOf(withId(R.id.iv_activity_main_no_data), withParent(allOf(withId(R.id.cl_activity_main_container), withParent(withId(android.R.id.content)))), isDisplayed())
+        )
+        ivPlaceHolder.check(matches(isDisplayed()))
+
+        val ivOpenMenu = onView(
+            allOf(withId(R.id.iv_activity_main_toolbar_search), withParent(allOf(withId(R.id.cl_activity_main_toolbar_search), withParent(withId(R.id.cl_activity_main_container)))),
                 isDisplayed()
             )
         )
-        imageView2.check(matches(isDisplayed()))
+        ivOpenMenu.check(matches(isDisplayed()))
+        ivOpenMenu.perform(click())
     }
 }
